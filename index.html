@@ -32,7 +32,7 @@
             <div class="col-2 border-top border-right border-dark">
                 9 A.M.
             </div>
-            <div id="9" class="col-9 border border-white">
+            <div id="time9" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -44,11 +44,11 @@
             <div class="col-2 border-top border-right border-dark">
                 10 A.M.
             </div>
-            <div id="10" class="col-9 border border-white">
+            <div id="time10" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
 
@@ -56,11 +56,11 @@
             <div class="col-2 border-top border-right border-dark">
                 11 A.M.
             </div>
-            <div id="11" class="col-9 border border-white">
+            <div id="time11" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
 
@@ -68,11 +68,11 @@
             <div class="col-2 border-top border-right border-dark">
                 12 P.M.
             </div>
-            <div id="12" class="col-9  border border-white">
+            <div id="time12" class="col-9  border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
 
@@ -80,11 +80,11 @@
             <div class="col-2 border-top border-right border-dark">
                 1 P.M.
             </div>
-            <div id="1" class="col-9 border border-white">
+            <div id="time1" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
 
@@ -92,11 +92,11 @@
             <div class="col-2 border-top border-right border-dark">
                 2 P.M.
             </div>
-            <div id="2" class="col-9 border border-white">
+            <div id="time2" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
 
@@ -104,11 +104,11 @@
             <div class="col-2 border-top border-right border-dark">
                 3 P.M.
             </div>
-            <div id="3" class="col-9 border border-white">
+            <div id="time3" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
 
@@ -116,11 +116,11 @@
             <div class="col-2 border-top border-right border-dark">
                 4 P.M.
             </div>
-            <div id="4" class="col-9 border border-white">
+            <div id="time4" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
 
@@ -128,17 +128,14 @@
             <div class="col-2 border-top border-right border-dark">
                 5 P.M.
             </div>
-            <div id="5" class="col-9 border border-white">
+            <div id="time5" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
     </div>
-
-
-
 
     <script type="text/javascript">
 
@@ -153,15 +150,102 @@
 
         var currentTime = moment();
 
-        console.log(moment().format("hh:mm:ss a"));
-        
-        if (currentTime.isBetween(moment('07:00:00 pm', "hh:mm:ss a"), moment('07:20:00 pm', "hh:mm:ss a"))) {
-            console.log("yoyo");
-        };
-
-        if (currentTime.isAfter("10:00:00 pm", "hh:mm:ss a")) {
-
+        //These if else statements control the background color of each of the time slots
+        if (currentTime.isBefore(moment("09:00:00 am", "hh:mm:ss a"))) {
+            $("#time9").addClass("future");
+        } else if (currentTime.isBetween(moment('09:00:00 am', "hh:mm:ss a"), moment('10:00:00 am', "hh:mm:ss a"))) {
+            $("#time9").removeClass("future");
+            $("#time9").addClass("present");
+        } else {
+            $("#time9").removeClass("present");
+            $("#time9").addClass("past");
         }
+
+        if (currentTime.isBefore(moment("10:00:00 am", "hh:mm:ss a"))) {
+            $("#time10").addClass("future");
+        } else if (currentTime.isBetween(moment('10:00:00 am', "hh:mm:ss a"), moment('11:00:00 am', "hh:mm:ss a"))) {
+            $("#time10").removeClass("future");
+            $("#time10").addClass("present");
+        } else {
+            $("#time10").removeClass("present");
+            $("#time10").addClass("past");
+        }
+
+        if (currentTime.isBefore(moment("11:00:00 am", "hh:mm:ss a"))) {
+            $("#time11").addClass("future");
+        } else if (currentTime.isBetween(moment('11:00:00 am', "hh:mm:ss a"), moment('12:00:00 pm', "hh:mm:ss a"))) {
+            $("#time11").removeClass("future");
+            $("#time11").addClass("present");
+        } else {
+            $("#time11").removeClass("present");
+            $("#time11").addClass("past");
+        }
+
+        if (currentTime.isBefore(moment("12:00:00 pm", "hh:mm:ss a"))) {
+            $("#time12").addClass("future");
+        } else if (currentTime.isBetween(moment('12:00:00 pm', "hh:mm:ss a"), moment('01:00:00 pm', "hh:mm:ss a"))) {
+            $("#time12").removeClass("future");
+            $("#time12").addClass("present");
+        } else {
+            $("#time12").removeClass("present");
+            $("#time12").addClass("past");
+        }
+
+        if (currentTime.isBefore(moment("01:00:00 pm", "hh:mm:ss a"))) {
+            $("#time1").addClass("future");
+        } else if (currentTime.isBetween(moment('01:00:00 pm', "hh:mm:ss a"), moment('02:00:00 pm', "hh:mm:ss a"))) {
+            $("#time1").removeClass("future");
+            $("#time1").addClass("present");
+        } else {
+            $("#time1").removeClass("present");
+            $("#time1").addClass("past");
+        }
+
+        if (currentTime.isBefore(moment("02:00:00 pm", "hh:mm:ss a"))) {
+            $("#time2").addClass("future");
+        } else if (currentTime.isBetween(moment('02:00:00 pm', "hh:mm:ss a"), moment('03:00:00 pm', "hh:mm:ss a"))) {
+            $("#time2").removeClass("future");
+            $("#time2").addClass("present");
+        } else {
+            $("#time2").removeClass("present");
+            $("#time2").addClass("past");
+        }
+
+        if (currentTime.isBefore(moment("03:00:00 pm", "hh:mm:ss a"))) {
+            $("#time3").addClass("future");
+        } else if (currentTime.isBetween(moment('03:00:00 pm', "hh:mm:ss a"), moment('04:00:00 pm', "hh:mm:ss a"))) {
+            $("#time3").removeClass("future");
+            $("#time3").addClass("present");
+        } else {
+            $("#time3").removeClass("present");
+            $("#time3").addClass("past");
+        }
+
+        if (currentTime.isBefore(moment("04:00:00 pm", "hh:mm:ss a"))) {
+            $("#time4").addClass("future");
+        } else if (currentTime.isBetween(moment('04:00:00 pm', "hh:mm:ss a"), moment('05:00:00 pm', "hh:mm:ss a"))) {
+            $("#time4").removeClass("future");
+            $("#time4").addClass("present");
+        } else {
+            $("#time4").removeClass("present");
+            $("#time4").addClass("past");
+        }
+
+        if (currentTime.isBefore(moment("05:00:00 pm", "hh:mm:ss a"))) {
+            $("#time5").addClass("future");
+        } else if (currentTime.isBetween(moment('05:00:00 pm', "hh:mm:ss a"), moment('06:00:00 pm', "hh:mm:ss a"))) {
+            $("#time5").removeClass("future");
+            $("#time5").addClass("present");
+        } else {
+            $("#time5").removeClass("present");
+            $("#time5").addClass("past");
+        }
+
+
+
+
+
+
 
     </script>
 </body>
