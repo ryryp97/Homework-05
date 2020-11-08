@@ -28,22 +28,23 @@
     </header>
     <div class="container">
         <!-- Timeblocks go here -->
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 9 A.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="9" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
+                <button type="button" class="saveBtn">Save</button>
             </div>
         </div>
-
-        <div class="row">
+        
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 10 A.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="10" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -51,11 +52,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 11 A.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="11" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -63,11 +64,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 12 P.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="12" class="col-9  border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -75,11 +76,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 1 P.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="1" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -87,11 +88,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 2 P.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="2" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -99,11 +100,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 3 P.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="3" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -111,11 +112,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 4 P.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="4" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -123,11 +124,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row margin">
             <div class="col-2 border-top border-right border-dark">
                 5 P.M.
             </div>
-            <div class="col-9 border border-white">
+            <div id="5" class="col-9 border border-white">
                 <textarea class="form-control" rows="1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
@@ -141,7 +142,6 @@
 
     <script type="text/javascript">
 
-
         var currentDayP = $("#currentDay");
 
         $(document).ready(function () {
@@ -151,8 +151,17 @@
             }, 1000);
         });
 
-        console.log(moment().format('LT'));
+        var currentTime = moment();
 
+        console.log(moment().format("hh:mm:ss a"));
+        
+        if (currentTime.isBetween(moment('07:00:00 pm', "hh:mm:ss a"), moment('07:20:00 pm', "hh:mm:ss a"))) {
+            console.log("yoyo");
+        };
+
+        if (currentTime.isAfter("10:00:00 pm", "hh:mm:ss a")) {
+
+        }
 
     </script>
 </body>
