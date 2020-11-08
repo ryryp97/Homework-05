@@ -4,7 +4,7 @@ This repository contains an app that runs in browser and that acts as a work day
 
 The site can be reached here: 
 
-Here is what the site looks like : 
+Here is what the site looks like : ![Day Planner](images/day_planner.png)
 
 ### Usage
 
