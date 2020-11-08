@@ -28,22 +28,130 @@
     </header>
     <div class="container">
         <!-- Timeblocks go here -->
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                9 A.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                10 A.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                11 A.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                12 P.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                1 P.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                2 P.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                3 P.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                4 P.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 border-top border-right border-dark">
+                5 P.M.
+            </div>
+            <div class="col-9 border border-white">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-1 border-right border-top border-dark rounded-right">
+
+            </div>
+        </div>
     </div>
 
 
 
 
     <script type="text/javascript">
-        
-        // console.log(now);
+
 
         var currentDayP = $("#currentDay");
-        $(document).ready(function() {
+
+        $(document).ready(function () {
             setInterval(function () {
                 var now = moment();
                 currentDayP.text(now);
             }, 1000);
         });
+
+        console.log(moment().format('LT'));
 
 
     </script>
