@@ -13,8 +13,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script> -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <title>Work Day Scheduler</title>
@@ -45,10 +43,10 @@
                 10 A.M.
             </div>
             <div id="time10" class="col-9 border border-white">
-                <textarea></textarea>
+                <textarea id="text10"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn10">Save</button>
             </div>
         </div>
 
@@ -57,10 +55,10 @@
                 11 A.M.
             </div>
             <div id="time11" class="col-9 border border-white">
-                <textarea></textarea>
+                <textarea id="text11"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn11">Save</button>
             </div>
         </div>
 
@@ -69,10 +67,10 @@
                 12 P.M.
             </div>
             <div id="time12" class="col-9  border border-white">
-                <textarea></textarea>
+                <textarea id="text12"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn12">Save</button>
             </div>
         </div>
 
@@ -81,10 +79,10 @@
                 1 P.M.
             </div>
             <div id="time1" class="col-9 border border-white">
-                <textarea></textarea>
+                <textarea id="text1"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn1">Save</button>
             </div>
         </div>
 
@@ -93,10 +91,10 @@
                 2 P.M.
             </div>
             <div id="time2" class="col-9 border border-white">
-                <textarea></textarea>
+                <textarea id="text2"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn2">Save</button>
             </div>
         </div>
 
@@ -105,10 +103,10 @@
                 3 P.M.
             </div>
             <div id="time3" class="col-9 border border-white">
-                <textarea></textarea>
+                <textarea id="text3"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn3">Save</button>
             </div>
         </div>
 
@@ -117,10 +115,10 @@
                 4 P.M.
             </div>
             <div id="time4" class="col-9 border border-white">
-                <textarea></textarea>
+                <textarea id="text4"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn4">Save</button>
             </div>
         </div>
 
@@ -129,10 +127,10 @@
                 5 P.M.
             </div>
             <div id="time5" class="col-9 border border-white">
-                <textarea></textarea>
+                <textarea id="text5"></textarea>
             </div>
             <div class="col-1 border-right border-top border-dark rounded-right">
-                <button type="button" class="saveBtn">Save</button>
+                <button type="button" class="saveBtn" id="saveBtn5">Save</button>
             </div>
         </div>
     </div>
@@ -264,6 +262,109 @@
         var updatedText9 = $("#text9");
         updatedText9.val(newText9);
 
+        var saveBtn10 = $("#saveBtn10");
+
+        saveBtn10.on("click", function() {
+            event.preventDefault;
+            var text10 = $("#text10").val();
+            console.log(text10);
+            localStorage.setItem("text10", text10);
+        })
+
+        var newText10 = localStorage.getItem("text10");
+        var updatedText10 = $("#text10");
+        updatedText10.val(newText10);
+
+        var saveBtn11 = $("#saveBtn11");
+
+        saveBtn11.on("click", function() {
+            event.preventDefault;
+            var text11 = $("#text11").val();
+            console.log(text11);
+            localStorage.setItem("text11", text11);
+        })
+
+        var newText11 = localStorage.getItem("text11");
+        var updatedText11 = $("#text11");
+        updatedText11.val(newText11);
+
+        var saveBtn12 = $("#saveBtn12");
+
+        saveBtn12.on("click", function() {
+            event.preventDefault;
+            var text12 = $("#text12").val();
+            console.log(text12);
+            localStorage.setItem("text12", text12);
+        })
+
+        var newText12 = localStorage.getItem("text12");
+        var updatedText12 = $("#text12");
+        updatedText12.val(newText12);
+
+        var saveBtn1 = $("#saveBtn1");
+
+        saveBtn1.on("click", function() {
+            event.preventDefault;
+            var text1 = $("#text1").val();
+            console.log(text1);
+            localStorage.setItem("text1", text1);
+        })
+
+        var newText1 = localStorage.getItem("text1");
+        var updatedText1 = $("#text1");
+        updatedText1.val(newText1);
+
+        var saveBtn2 = $("#saveBtn2");
+
+        saveBtn2.on("click", function() {
+            event.preventDefault;
+            var text2 = $("#text2").val();
+            console.log(text2);
+            localStorage.setItem("text2", text2);
+        })
+
+        var newText2 = localStorage.getItem("text2");
+        var updatedText2 = $("#text2");
+        updatedText2.val(newText2);
+
+        var saveBtn3 = $("#saveBtn3");
+
+        saveBtn3.on("click", function() {
+            event.preventDefault;
+            var text3 = $("#text3").val();
+            console.log(text3);
+            localStorage.setItem("text3", text3);
+        })
+
+        var newText3 = localStorage.getItem("text3");
+        var updatedText3 = $("#text3");
+        updatedText3.val(newText3);
+
+        var saveBtn4 = $("#saveBtn4");
+
+        saveBtn4.on("click", function() {
+            event.preventDefault;
+            var text4 = $("#text4").val();
+            console.log(text4);
+            localStorage.setItem("text4", text4);
+        })
+
+        var newText4 = localStorage.getItem("text4");
+        var updatedText4 = $("#text4");
+        updatedText4.val(newText4);
+
+        var saveBtn5 = $("#saveBtn5");
+
+        saveBtn5.on("click", function() {
+            event.preventDefault;
+            var text5 = $("#text5").val();
+            console.log(text5);
+            localStorage.setItem("text5", text5);
+        })
+
+        var newText5 = localStorage.getItem("text5");
+        var updatedText5 = $("#text5");
+        updatedText5.val(newText5);
 
     </script>
 </body>
