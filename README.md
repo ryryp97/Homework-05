@@ -1,4 +1,4 @@
-# Homework-05
+# Workday-Scheduler
 
 This repository contains an app that runs in browser and that acts as a work day scheduler.  It was made in order to continue practicing with JavaScript as well as JQuery.
 
