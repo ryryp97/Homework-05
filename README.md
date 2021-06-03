@@ -2,7 +2,7 @@
 
 This repository contains an app that runs in browser and that acts as a work day scheduler.  It was made in order to continue practicing with JavaScript as well as JQuery.
 
-The site can be reached here: [Day Planner](https://ryryp97.github.io/Homework-05/) 
+The site can be reached here: [Day Planner](https://ryryp97.github.io/Workday-Scheduler/) 
 
 Here is what the site looks like : ![Day Planner](images/day_planner.png)
 
